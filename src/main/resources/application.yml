@@ -1,0 +1,16 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: demo
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher #Springfox使用的路径匹配是基于AntPathMatcher,SpringBoot 2.6.X使用的是PathPatternMatcher
+  datasource:
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/learning
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启sql日志
